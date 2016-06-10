@@ -14,6 +14,12 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @item = Item.find(params[:id])
+    
+    logger.debug("[debug] users#index")
+    logger.info("[info] users#index")
+    logger.warn("[warn] users#index")
+    logger.error("[error] users#index")
+    logger.fatal("[fatal] users#index")
 
     respond_to do |format|
       format.html # show.html.erb
